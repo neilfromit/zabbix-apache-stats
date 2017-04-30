@@ -1,5 +1,11 @@
-/*.pyc
-/*.pyo
-/.settings
-/.project
-/.pydevproject
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+install-sh
+missing
+zabbix-apache-stats-*.tar.gz
+zabbix-apache-stats.spec

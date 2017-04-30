@@ -1,0 +1,32 @@
+Summary:            Apache Stats Script
+Name:               zabbix-apache-stats
+Version:            @VERSION@
+Release:            1
+License:            GPL2
+Group:              System Environment/Base
+Source:             %{name}-%{version}.tar.gz
+URL:                https://github.com/gpmidi/zabbix-apache-stats
+BuildArch:          noarch
+
+%define _prefix /opt/smx/apache
+
+%description
+
+%prep
+%setup
+
+%build
+%configure
+make
+
+%install
+rm -rf %{buildroot}
+make install DESTDIR=%{buildroot}
+
+%files
+%{_bindir}/check_apache
+
+
+%changelog
+* Tue Apr 27 2017 Neil Townsend <neil.townsend@smxemail.com> - 1.0.0
+- Packaged up the check script
